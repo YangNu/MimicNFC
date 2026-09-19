@@ -47,3 +47,10 @@ kotlin {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    // Coroutines for off-UI-thread APDU capture (IsoDep.transceive) during reader mode.
+    // NFC (NfcAdapter/IsoDep/HostApduService) and JSON (org.json) are provided by the
+    // Android SDK itself, so no extra libraries are needed for those.
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+}
