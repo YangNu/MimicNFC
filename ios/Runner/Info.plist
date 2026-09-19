@@ -66,5 +66,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<!-- NFC (iOS capture only; replay/HCE is not available to non-partner apps on iOS). -->
+	<key>NFCReaderUsageDescription</key>
+	<string>This app reads NFC cards to capture their data for replay on supported devices.</string>
+	<!-- AIDs this app is permitted to SELECT when reading ISO 7816 (Type 4) tags.
+	     Add any proprietary AIDs from your own system here. -->
+	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+	<array>
+		<string>D2760000850101</string>
+	</array>
 </dict>
 </plist>

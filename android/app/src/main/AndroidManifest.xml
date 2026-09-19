@@ -1,4 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- NFC: required for both reader-mode capture and HCE replay. -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- The app is useless without NFC + Host Card Emulation hardware, so mark them required. -->
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+    <uses-feature android:name="android.hardware.nfc.hce" android:required="true" />
+
     <application
         android:label="mimic_nfc"
         android:name="${applicationName}"
